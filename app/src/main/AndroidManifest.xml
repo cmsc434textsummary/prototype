@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -20,15 +21,31 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http"/>
+
+            </intent-filter>
         </activity>
+
         <activity android:name=".SummaryConfigActivity" />
-        <activity android:name=".SummaryActivity" />
+
+        <activity
+            android:name=".SummaryActivity"
+            android:label="@string/empty"
+            android:theme="@style/AppTheme" />
+
         <activity android:name=".RecommendArticleActivity" />
+
         <activity
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings"
             android:theme="@style/AppTheme.NoActionBar" />
+
         <activity android:name=".SavedArticlesActivity" />
+
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login"></activity>

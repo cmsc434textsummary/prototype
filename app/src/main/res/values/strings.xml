@@ -16,6 +16,8 @@
         completions."
     </string>
 
+
+
     <string-array name="type_names">
         <item>Select Type</item>
         <item>Type1</item>
@@ -27,5 +29,30 @@
         <item>Type7</item>
     </string-array>
 
-    
+
+    <string name="empty"></string>
+    <string name="invalid_url">Invalid URL, failed to open the page</string>
+    <string name="not_implemented">This function is not implemented yet</string>
+    <string name="sample_url">https://www.washingtonpost.com/politics/whos-who-in-the-george-papadopoulos-court-documents/2017/10/30/e131158c-bdb3-11e7-97d9-bdab5a0ab381_story.html?utm_term=.be7f3dfd193d</string>
+    <string name="sample_favicon_path">drawable/wp_favicon.jpg</string>
+    <string name="sample_author">Rosalind S. Helderman</string>
+    <string name="sample_title">Who’s who in the George Papadopoulos court documents</string>
+    <string name="sample_text">
+        Newly released court documents show that Trump foreign policy adviser George Papadopoulos
+        communicated with several senior campaign officials about his outreach to the Russian government
+        over a period of months. The recipients of Papadopoulos’s emails are not named in the filings,
+        but The Washington Post has identified several individuals based on interviews and other documents.
+        Papadopoulos pleaded guilty this month to lying to federal agents about his outreach to Russia.
+        “The Campaign Supervisor”: Trump campaign national co-chairman Sam Clovis
+        Victoria Toensing, an attorney for Sam Clovis, confirmed that several references in court filings
+        to “the campaign supervisor” refer to the onetime radio host from Iowa, who served as Trump\'s
+        national campaign co-chairman. At one point, Papadopoulos emailed Clovis and other campaign
+        officials about a March 24, 2016, meeting he had in London with a professor, who had introduced
+        him to the Russian ambassador and a Russian woman he described as “Putin\’s niece.”
+        The group had talked about arranging a meeting “between us and the Russian leadership to
+        discuss U.S.-Russia ties under President Trump,” Papadopoulos wrote. </string>
+    <string name="sample_source">WashingtonPost</string>
+    <string name="sample_image_path">drawable/wp_image.jpg</string>
+
+
 </resources>
