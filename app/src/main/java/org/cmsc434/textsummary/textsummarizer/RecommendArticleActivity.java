@@ -3,6 +3,8 @@ package org.cmsc434.textsummary.textsummarizer;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -12,7 +14,8 @@ import android.widget.ListView;
 public class RecommendArticleActivity extends AppCompatActivity {
 
     ArrayList<String> items =  new ArrayList<>();
-
+    public static Menu menu;
+    public static MenuItem account;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,11 +59,36 @@ public class RecommendArticleActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 //                Intent backIntent = new Intent(this, MainActivity.class);
-                startActivity(new Intent(RecommendArticleActivity.this, MainActivity.class));
 
+
+//  This is wrong.. Back shouldn't put current activity on the stack. It resulted creating many instances of this page.
+//                startActivity(new Intent(RecommendArticleActivity.this, MainActivity.class));
+            finish();
 
             }
         });
+
+
+    }
+
+
+    public void accountOnClick(MenuItem item) {
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        for (int j = 0; j < menu.size(); j++) {
+            MenuItem item = menu.getItem(j);
+            item.setShowAsActionFlags(MenuItem.SHOW_AS_ACTION_ALWAYS);
+        }
+        getMenuInflater().inflate(R.menu.account_menu_btn, menu);
+        this.menu = menu;
+        account = menu.findItem(R.id.account_btn);
+        return super.onCreateOptionsMenu(menu);
+
     }
 
 }

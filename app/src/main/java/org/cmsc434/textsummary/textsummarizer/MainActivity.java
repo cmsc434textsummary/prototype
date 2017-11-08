@@ -3,15 +3,26 @@ package org.cmsc434.textsummary.textsummarizer;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
+    private static EditText urlEditText;
+    public static Menu menu;
+    public static MenuItem account;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        urlEditText = findViewById(R.id.textView);
+        urlEditText.setText(R.string.sample_url);
 
     }
 
@@ -23,11 +34,6 @@ public class MainActivity extends AppCompatActivity {
         //pass text to summary activity
         intent.putExtra("articleURL", aURL);
         // open summary activity
-        startActivity(intent);
-    }
-
-    public void login(View view) {
-        Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }
 
@@ -51,5 +57,23 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void accountOnClick(MenuItem item) {
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        for (int j = 0; j < menu.size(); j++) {
+            MenuItem item = menu.getItem(j);
+            item.setShowAsActionFlags(MenuItem.SHOW_AS_ACTION_ALWAYS);
+        }
+        getMenuInflater().inflate(R.menu.account_menu_btn, menu);
+        this.menu = menu;
+        account = menu.findItem(R.id.account_btn);
+        return super.onCreateOptionsMenu(menu);
+
+    }
 
 }

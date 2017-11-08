@@ -6,6 +6,7 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.SpannableString;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -50,7 +51,7 @@ public class SummaryActivity extends AppCompatActivity {
         Bundle data = getIntent().getExtras();
 
         if(data != null) {
-            url = (String) data.get("url");
+            url = ((SpannableString) data.get("url")).toString();
         } else {
             url = getText(R.string.sample_url).toString();
         }
@@ -95,7 +96,8 @@ public class SummaryActivity extends AppCompatActivity {
     }
 
     public void accountOnClick(MenuItem item) {
-        Toast.makeText(getApplicationContext(), getText(R.string.not_implemented), Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
     }
 
     public void saveOnClick(View view) {
@@ -115,4 +117,6 @@ public class SummaryActivity extends AppCompatActivity {
             startActivity(i);
         }
     }
+
+
 }
