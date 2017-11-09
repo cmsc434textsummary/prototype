@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import java.util.ArrayList;
 import android.widget.ListView;
+import android.widget.TextView;
 
 public class RecommendArticleActivity extends AppCompatActivity {
 
@@ -45,7 +46,7 @@ public class RecommendArticleActivity extends AppCompatActivity {
 
             }
         });
-        Button submit = findViewById(R.id.submit);
+        TextView submit = findViewById(R.id.submit);
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -54,7 +55,7 @@ public class RecommendArticleActivity extends AppCompatActivity {
             }
         });
 
-        Button back = findViewById(R.id.back);
+        TextView back = findViewById(R.id.back);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

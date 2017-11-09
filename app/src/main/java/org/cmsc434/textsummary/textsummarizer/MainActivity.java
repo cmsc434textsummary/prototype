@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         urlEditText = findViewById(R.id.textView);
-        urlEditText.setText(R.string.sample_url);
 
     }
 

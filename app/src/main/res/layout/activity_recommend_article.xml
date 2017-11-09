@@ -55,9 +55,9 @@
 
         </LinearLayout>
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="390dp"
+            android:layout_height="match_parent"
             android:orientation="vertical">
             <Button
                 android:background="#ffffff"
@@ -70,29 +70,48 @@
             <ListView
                 android:id="@+id/listView1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"></ListView>
-        </LinearLayout>
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/selectAll" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp">
+            <LinearLayout
+                android:id="@+id/endLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:background="#aaaaaa"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal">
 
-            <Button
+                <TextView
+                    android:id="@+id/submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:layout_gravity="start"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:text="Submit"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
 
-                android:id="@+id/submit"
-                android:layout_width="160dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:text="Submit" />
+                <TextView
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:layout_gravity="end"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:text="Back"
+                    android:textAlignment="textEnd"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
 
-            <Button
-                android:id="@+id/back"
+            </LinearLayout>
+        </RelativeLayout>
 
-                android:layout_width="160dp"
-                android:layout_height="match_parent"
-                android:text="Back" />
-        </LinearLayout>
+
+
+
     </LinearLayout>
 
 

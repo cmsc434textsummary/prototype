@@ -67,8 +67,8 @@
     <LinearLayout
         android:id="@+id/endLinearLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#55000000"
+        android:layout_height="25dp"
+        android:background="#aaaaaa"
         android:layout_alignParentBottom="true"
         android:orientation="horizontal">
 
@@ -77,6 +77,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
+            android:paddingTop="5dp"
             android:layout_weight="1"
             android:clickable="true"
             android:onClick="backOnClick"
@@ -89,6 +90,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:paddingTop="5dp"
             android:layout_weight="1"
             android:clickable="true"
             android:onClick="saveOnClick"
@@ -101,6 +103,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
+            android:paddingTop="5dp"
             android:layout_weight="1"
             android:clickable="true"
             android:onClick="fullOnClick"
