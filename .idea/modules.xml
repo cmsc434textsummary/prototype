@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/TextSummarizer.iml" filepath="$PROJECT_DIR$/TextSummarizer.iml" />
+      <module fileurl="file://C:\Users\emily\AndroidStudioProjects\prototype\TextSummarizer.iml" filepath="C:\Users\emily\AndroidStudioProjects\prototype\TextSummarizer.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/prototype.iml" filepath="$PROJECT_DIR$/prototype.iml" />
     </modules>
   </component>
 </project>

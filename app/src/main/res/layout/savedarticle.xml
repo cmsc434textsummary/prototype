@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.cmsc434.textsummary.textsummarizer.RecommendArticleActivity">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <CheckedTextView  xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:id="@+id/textview"
+        android:padding="5dp"
+        android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+
+    />
+
+    <Button
+        android:id="@+id/removebutton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Remove"
+    />
+
+</LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
