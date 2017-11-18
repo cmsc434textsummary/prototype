@@ -90,27 +90,27 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/submit"
+                    android:id="@+id/back"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingTop="5dp"
                     android:layout_gravity="start"
                     android:layout_weight="1"
                     android:clickable="true"
-                    android:paddingLeft="@dimen/activity_horizontal_margin"
-                    android:text="Submit"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:text="Back"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
 
                 <TextView
-                    android:id="@+id/back"
+                    android:id="@+id/submit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingTop="5dp"
                     android:layout_gravity="end"
                     android:layout_weight="1"
                     android:clickable="true"
-                    android:paddingRight="@dimen/activity_horizontal_margin"
-                    android:text="Back"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:text="Submit"
                     android:textAlignment="textEnd"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
 

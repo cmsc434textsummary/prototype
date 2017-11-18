@@ -48,11 +48,6 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void menu(View view) {
-        Intent intent = new Intent(this, SettingsActivity.class);
-        startActivity(intent);
-    }
-
     public void sampleOnClick(View view) {
         Intent intent = new Intent(this, SummaryActivity.class);
         startActivity(intent);
@@ -80,11 +75,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void homeOnClick(MenuItem item) {
         Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-    }
-
-    public void settingOnClick(MenuItem item) {
-        Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
     }
 

@@ -106,30 +106,32 @@
 
         android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/fulltextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:layout_weight="1"
-            android:paddingTop="5dp"
-            android:clickable="true"
-            android:onClick="submitOnClick"
-            android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:text="Submit"
-            android:textAlignment="textStart"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+
         <TextView
             android:id="@+id/backtextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="5dp"
-            android:layout_gravity="end"
+            android:layout_gravity="start"
             android:layout_weight="1"
             android:clickable="true"
             android:onClick="backOnClick"
-            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
             android:text="Back"
+            android:textAlignment="textStart"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/fulltextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_weight="1"
+            android:paddingTop="5dp"
+            android:clickable="true"
+            android:onClick="submitOnClick"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:text="Submit"
             android:textAlignment="textEnd"
             android:textAppearance="?android:attr/textAppearanceSmall" />
     </LinearLayout>

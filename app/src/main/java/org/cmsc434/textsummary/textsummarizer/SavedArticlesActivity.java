@@ -74,7 +74,7 @@ public class SavedArticlesActivity extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(null, MainActivity.class));
+                startActivity(new Intent(SavedArticlesActivity.this, MainActivity.class));
                 finish();
             }
         });
@@ -108,8 +108,4 @@ public class SavedArticlesActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void settingOnClick(MenuItem item) {
-        Intent intent = new Intent(this, SettingsActivity.class);
-        startActivity(intent);
-    }
 }
