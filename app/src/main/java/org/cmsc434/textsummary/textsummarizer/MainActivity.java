@@ -11,11 +11,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseMenuActivity {
 
     private static EditText urlEditText;
-    public static Menu menu;
-    public static MenuItem account;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,29 +51,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    /* Options menu inflate and onClicks */
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-
-        for (int j = 0; j < menu.size(); j++) {
-            MenuItem item = menu.getItem(j);
-            item.setShowAsActionFlags(MenuItem.SHOW_AS_ACTION_ALWAYS);
-        }
-        getMenuInflater().inflate(R.menu.account_menu_btn, menu);
-        this.menu = menu;
-        account = menu.findItem(R.id.account_btn);
-        return super.onCreateOptionsMenu(menu);
+    protected void onResume() {
+        super.onResume();
+        this.invalidateOptionsMenu();
 
     }
-
-    public void accountOnClick(MenuItem item) {
-        Intent intent = new Intent(this, LoginActivity.class);
-        startActivity(intent);
-    }
-
-    public void homeOnClick(MenuItem item) {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-    }
-
 }

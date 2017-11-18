@@ -15,11 +15,9 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class SavedArticlesActivity extends AppCompatActivity {
+public class SavedArticlesActivity extends BaseMenuActivity {
 
     ArrayList<String> items =  new ArrayList<>();
-    public static Menu menu;
-    public static MenuItem account;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,32 +78,6 @@ public class SavedArticlesActivity extends AppCompatActivity {
         });
 
 
-    }
-
-
-    /* Options menu inflate and onClicks */
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-
-        for (int j = 0; j < menu.size(); j++) {
-            MenuItem item = menu.getItem(j);
-            item.setShowAsActionFlags(MenuItem.SHOW_AS_ACTION_ALWAYS);
-        }
-        getMenuInflater().inflate(R.menu.account_menu_btn, menu);
-        this.menu = menu;
-        account = menu.findItem(R.id.account_btn);
-        return super.onCreateOptionsMenu(menu);
-
-    }
-
-    public void accountOnClick(MenuItem item) {
-        Intent intent = new Intent(this, LoginActivity.class);
-        startActivity(intent);
-    }
-
-    public void homeOnClick(MenuItem item) {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
     }
 
 }

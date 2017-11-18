@@ -32,6 +32,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,14 +42,13 @@ import static android.Manifest.permission.READ_CONTACTS;
 /**
  * A login screen that offers login via email/password.
  */
-public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<Cursor> {
+public class LoginActivity extends BaseMenuActivity implements LoaderCallbacks<Cursor> {
 
     /**
      * Id to identity READ_CONTACTS permission request.
      */
     private static final int REQUEST_READ_CONTACTS = 0;
-    public static Menu menu;
-    public static MenuItem account;
+
     /**
      * A dummy authentication store containing known user names and passwords.
      * TODO: remove after connecting to a real authentication system.
@@ -94,7 +94,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                attemptLogin();
+                userAccount = attemptLogin();
+                if(userAccount != null) {
+                    signedIn = true;
+                    Toast.makeText(getApplicationContext(), getText(R.string.sign_in) + " " + userAccount, Toast.LENGTH_LONG).show();
+                }
             }
         });
 
@@ -151,9 +155,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
      * If there are form errors (invalid email, missing fields, etc.), the
      * errors are presented and no actual login attempt is made.
      */
-    private void attemptLogin() {
+    private String attemptLogin() {
         if (mAuthTask != null) {
-            return;
+            return null;
         }
 
         // Reset errors.
@@ -189,6 +193,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             // There was an error; don't attempt login and focus the first
             // form field with an error.
             focusView.requestFocus();
+            return null;
         } else {
             // Show a progress spinner, and kick off a background task to
             // perform the user login attempt.
@@ -196,6 +201,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             mAuthTask = new UserLoginTask(email, password);
             mAuthTask.execute((Void) null);
         }
+        return email;
     }
 
     private boolean isEmailValid(String email) {
@@ -355,34 +361,13 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         }
     }
 
-    /* Options menu inflate and onClicks */
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-
-        for (int j = 0; j < menu.size(); j++) {
-            MenuItem item = menu.getItem(j);
-            item.setShowAsActionFlags(MenuItem.SHOW_AS_ACTION_ALWAYS);
+    public void forgotPasswordOnClick(View view) {
+        String email = mEmailView.getText().toString().trim();
+        if(email.isEmpty()) {
+            mEmailView.setError(getString(R.string.error_field_required));
+        } else {
+            Toast.makeText(this, getString(R.string.password_sent) + " " + email, Toast.LENGTH_LONG).show();
         }
-        getMenuInflater().inflate(R.menu.account_menu_btn, menu);
-        this.menu = menu;
-        account = menu.findItem(R.id.account_btn);
-        return super.onCreateOptionsMenu(menu);
-
-    }
-
-    public void accountOnClick(MenuItem item) {
-        Intent intent = new Intent(this, LoginActivity.class);
-        startActivity(intent);
-    }
-
-    public void homeOnClick(MenuItem item) {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-    }
-
-    public void settingOnClick(MenuItem item) {
-        Intent intent = new Intent(this, SettingsActivity.class);
-        startActivity(intent);
     }
 
 }

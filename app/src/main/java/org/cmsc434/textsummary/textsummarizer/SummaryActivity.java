@@ -19,10 +19,8 @@ import android.widget.Toast;
 import java.net.URI;
 import java.net.URL;
 
-public class SummaryActivity extends AppCompatActivity {
+public class SummaryActivity extends BaseMenuActivity {
 
-    public static Menu menu;
-    public static MenuItem account;
     public static ImageView
             siteLogoImgView,
             articleImgView;
@@ -31,7 +29,6 @@ public class SummaryActivity extends AppCompatActivity {
             displayTitleView,
             displayAuthorView,
             displaySiteNameView;
-
 
     public String url;
 
@@ -105,36 +102,5 @@ public class SummaryActivity extends AppCompatActivity {
             startActivity(i);
         }
     }
-
-    /* Options menu inflate and onClicks */
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-
-        for (int j = 0; j < menu.size(); j++) {
-            MenuItem item = menu.getItem(j);
-            item.setShowAsActionFlags(MenuItem.SHOW_AS_ACTION_ALWAYS);
-        }
-        getMenuInflater().inflate(R.menu.account_menu_btn, menu);
-        this.menu = menu;
-        account = menu.findItem(R.id.account_btn);
-        return super.onCreateOptionsMenu(menu);
-
-    }
-
-    public void accountOnClick(MenuItem item) {
-        Intent intent = new Intent(this, LoginActivity.class);
-        startActivity(intent);
-    }
-
-    public void homeOnClick(MenuItem item) {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-    }
-
-    public void settingOnClick(MenuItem item) {
-        Intent intent = new Intent(this, SettingsActivity.class);
-        startActivity(intent);
-    }
-
 
 }

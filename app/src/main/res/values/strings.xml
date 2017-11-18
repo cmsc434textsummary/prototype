@@ -17,7 +17,6 @@
     </string>
 
 
-
     <string-array name="type_names">
         <item>Select Type</item>
         <item>Type1</item>
@@ -53,6 +52,8 @@
         discuss U.S.-Russia ties under President Trump,” Papadopoulos wrote. </string>
     <string name="sample_source">WashingtonPost</string>
     <string name="sample_image_path">drawable/wp_image.jpg</string>
-
+    <string name="password_sent">Password reset information sent to email</string>
+    <string name="signed_out">Successfully signed out</string>
+    <string name="sign_in">Signed in as</string>
 
 </resources>

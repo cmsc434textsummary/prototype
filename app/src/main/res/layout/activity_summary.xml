@@ -12,7 +12,9 @@
         android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
         android:background="?attr/colorPrimary"
+        app:titleTextColor="@color/white"
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
@@ -81,6 +83,8 @@
         android:id="@+id/endLinearLayout"
         android:layout_width="match_parent"
         android:layout_height="25dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
         android:background="#aaaaaa"
         android:layout_alignParentBottom="true"
         android:orientation="horizontal">
@@ -94,7 +98,6 @@
             android:layout_weight="1"
             android:clickable="true"
             android:onClick="backOnClick"
-            android:paddingLeft="@dimen/activity_horizontal_margin"
             android:text="Setting"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
@@ -120,7 +123,6 @@
             android:layout_weight="1"
             android:clickable="true"
             android:onClick="fullOnClick"
-            android:paddingRight="@dimen/activity_horizontal_margin"
             android:text="Read full"
             android:textAlignment="textEnd"
             android:textAppearance="?android:attr/textAppearanceSmall" />

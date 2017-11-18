@@ -6,11 +6,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="org.cmsc434.textsummary.textsummarizer.SummaryConfigActivity">
+
     <android.support.v7.widget.Toolbar
         android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
         android:background="?attr/colorPrimary"
+        app:titleTextColor="@color/white"
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
