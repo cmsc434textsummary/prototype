@@ -6,6 +6,7 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.text.SpannableString;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -40,6 +41,10 @@ public class SummaryActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_summary);
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
+
+
 
         displaySiteNameView = (TextView) findViewById(R.id.displaySiteNameView);
         displayTitleView = (TextView) findViewById(R.id.displayTitleView);
@@ -47,6 +52,7 @@ public class SummaryActivity extends AppCompatActivity {
         displayTextView = (TextView) findViewById(R.id.displayTextView);
         siteLogoImgView = (ImageView) findViewById(R.id.displaySiteImageView);
         articleImgView = (ImageView) findViewById(R.id.displayArticleImageView);
+
 
         Bundle data = getIntent().getExtras();
 
@@ -81,6 +87,26 @@ public class SummaryActivity extends AppCompatActivity {
 
     }
 
+
+    public void saveOnClick(View view) {
+        Toast.makeText(getApplicationContext(), getText(R.string.not_implemented), Toast.LENGTH_LONG).show();
+    }
+
+    public void backOnClick(View view) {
+        /* TODO save url, article text package result intent */
+
+        setResult(RESULT_OK);
+        finish();
+    }
+
+    public void fullOnClick(View view) {
+        Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        if(getPackageManager().resolveActivity(i, 0) != null) {
+            startActivity(i);
+        }
+    }
+
+    /* Options menu inflate and onClicks */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
@@ -100,22 +126,14 @@ public class SummaryActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void saveOnClick(View view) {
-        Toast.makeText(getApplicationContext(), getText(R.string.not_implemented), Toast.LENGTH_LONG).show();
+    public void homeOnClick(MenuItem item) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 
-    public void backOnClick(View view) {
-        /* TODO save url, article text package result intent */
-
-        setResult(RESULT_OK);
-        finish();
-    }
-
-    public void fullOnClick(View view) {
-        Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-        if(getPackageManager().resolveActivity(i, 0) != null) {
-            startActivity(i);
-        }
+    public void settingOnClick(MenuItem item) {
+        Intent intent = new Intent(this, SettingsActivity.class);
+        startActivity(intent);
     }
 
 

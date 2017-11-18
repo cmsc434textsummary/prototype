@@ -1,74 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="org.cmsc434.textsummary.textsummarizer.MainActivity"
     tools:layout_editor_absoluteY="81dp">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
-    <Button
-        android:id="@+id/recommended"
-        android:layout_width="wrap_content"
-        android:layout_height="46dp"
-        android:layout_marginBottom="47dp"
-        android:text="Recommended for Me"
-        android:onClick="recommended"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/myarticles" />
-
-    <Button
-        android:id="@+id/myarticles"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:layout_marginStart="34dp"
-        android:text="My Articles"
-        android:onClick="myArticles"
-        app:layout_constraintBottom_toTopOf="@+id/recommended"
-        app:layout_constraintStart_toStartOf="@+id/recommended"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/summarize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Summarize!"
+            android:onClick="createSummary" />
 
-    @mipmap/ic_launcher_roun
+        <Button
+            android:id="@+id/recommended"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Recommended for Me"
+            android:onClick="recommended" />
+
+        <Button
+            android:id="@+id/myarticles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="My Articles"
+            android:onClick="myArticles" />
+
+    </LinearLayout>
+
+
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="78dp"
-        android:layout_marginTop="120dp"
-        app:layout_constraintBottom_toTopOf="@+id/myarticles"
-        app:layout_constraintStart_toStartOf="@+id/myarticles"
+        android:layout_marginTop="100dp"
+        android:layout_below="@+id/my_toolbar"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/ic_launcher_round" />
 
-    <Button
-        android:id="@+id/summarize"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="120dp"
-        android:layout_marginStart="36dp"
-        android:text="Summarize!"
-        android:onClick="createSummary"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/recommended"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
 
     <EditText
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
+        android:layout_marginTop="50dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
+        android:layout_below="@+id/imageView"
         android:maxLines="1"
         android:inputType="text"
-        android:hint="Article URL"
-        app:layout_constraintBottom_toTopOf="@+id/summarize"
-        app:layout_constraintStart_toStartOf="@+id/summarize"
-        app:layout_constraintTop_toBottomOf="@+id/recommended" />
+        android:hint="Article URL" />
 
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>

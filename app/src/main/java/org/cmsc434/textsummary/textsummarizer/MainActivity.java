@@ -3,6 +3,7 @@ package org.cmsc434.textsummary.textsummarizer;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -20,7 +21,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
         urlEditText = findViewById(R.id.textView);
 
     }
@@ -56,11 +58,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void accountOnClick(MenuItem item) {
-        Intent intent = new Intent(this, LoginActivity.class);
-        startActivity(intent);
-    }
-
+    /* Options menu inflate and onClicks */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
@@ -73,6 +71,21 @@ public class MainActivity extends AppCompatActivity {
         account = menu.findItem(R.id.account_btn);
         return super.onCreateOptionsMenu(menu);
 
+    }
+
+    public void accountOnClick(MenuItem item) {
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
+    }
+
+    public void homeOnClick(MenuItem item) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void settingOnClick(MenuItem item) {
+        Intent intent = new Intent(this, SettingsActivity.class);
+        startActivity(intent);
     }
 
 }

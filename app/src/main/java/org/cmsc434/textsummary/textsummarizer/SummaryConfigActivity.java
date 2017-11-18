@@ -45,6 +45,10 @@ public class SummaryConfigActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_summary_config);
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
+
+
         urlEditText = findViewById(R.id.url_edittext);
         lineNumEditText = findViewById(R.id.linenum_edittext);
         saveCheckBox = findViewById(R.id.save_checkbox);
@@ -76,11 +80,7 @@ public class SummaryConfigActivity extends AppCompatActivity {
         startActivity(i);
     }
 
-    public void accountOnClick(MenuItem item) {
-        Intent intent = new Intent(this, LoginActivity.class);
-        startActivity(intent);
-    }
-
+    /* Options menu inflate and onClicks */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
@@ -95,5 +95,19 @@ public class SummaryConfigActivity extends AppCompatActivity {
 
     }
 
+    public void accountOnClick(MenuItem item) {
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
+    }
+
+    public void homeOnClick(MenuItem item) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void settingOnClick(MenuItem item) {
+        Intent intent = new Intent(this, SettingsActivity.class);
+        startActivity(intent);
+    }
 
 }

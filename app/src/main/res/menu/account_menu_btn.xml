@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:balloonberry="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/logo"
+        android:title="Home"
+        android:onClick="homeOnClick"
+        android:icon="@drawable/usericon"/>
+    <item android:id="@+id/setting"
+        android:title="Settings"
+        android:onClick="settingOnClick"
+        android:icon="@drawable/usericon"/>
     <item android:id="@+id/account_btn"
-        android:title="menuItems"
+        android:title="Account"
         android:onClick="accountOnClick"
-        android:orderInCategory="10"
-        balloonberry:showAsAction="always"
-        android:icon="@drawable/usericon" />
+        android:icon="@drawable/usericon"
+        balloonberry:showAsAction="ifRoom"/>
+
 
 </menu>
