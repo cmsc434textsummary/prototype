@@ -57,11 +57,12 @@
                 android:text="   Type to Search Articles" />
 
             <ImageView
+                android:src="@drawable/search"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:paddingRight="5dp"
                 android:layout_weight="1"
-                app:srcCompat="@android:drawable/btn_star" />
+                />
 
 
         </LinearLayout>
