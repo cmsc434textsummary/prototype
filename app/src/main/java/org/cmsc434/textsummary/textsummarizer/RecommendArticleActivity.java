@@ -28,7 +28,7 @@ public class RecommendArticleActivity extends BaseMenuActivity {
         /* Drop down list Adapter */
         final ListView checkboxView = (ListView)findViewById(R.id.listView1);
         checkboxView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
-        String[] items={"Article1", "Article2", "Article3","Article4", "Article5", "Article6","Article7"};
+String[] items={"10 Step To Successful Outsourcing", "6 Instant Confidence Boosters", "Tips To Make Money Online","No Cellphones By Law", "Money With Facebook Ads", "Guide to Making Money Online","24 Rules Creating Successful Websites"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.checkbox, R.id.textview, items);
         checkboxView.setAdapter(adapter);
 //        checkboxView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
