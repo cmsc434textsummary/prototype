@@ -30,7 +30,7 @@ public class SavedArticlesActivity extends BaseMenuActivity {
         /* Drop down list Adapter */
         final ListView checkboxView = (ListView)findViewById(R.id.listView1);
         checkboxView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
-        ArrayList<String> items= new ArrayList<>(Arrays.asList("Article1", "Article2", "Article3","Article4", "Article5", "Article6","Article7"));
+        ArrayList<String> items= new ArrayList<>(Arrays.asList("10 Step To Successful Study", "How to Build Muscle", "How To Make Money","How to Diet", "Earn Money From Internet", "Guide to Bake Cookies","10 Rules to Survive in CS"));
         final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.savedarticle, R.id.textview, items);
         checkboxView.setAdapter(adapter);
 //        checkboxView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
@@ -50,16 +50,29 @@ public class SavedArticlesActivity extends BaseMenuActivity {
 
             }
         });
-        for (int j=0; j < adapter.getCount(); j++) {
-            View v = adapter.getView(j, null, null);
-            final int f = j;
-            v.findViewById(R.id.removebutton).setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    adapter.remove(adapter.getItem(f));
-                }
-            });
-        }
+
+//<Button
+//        android:id="@+id/removebutton"
+//        android:layout_width="match_parent"
+//        android:layout_height="match_parent"
+//        android:text="Remove"
+//                />
+//
+//
+//
+//        for (int j=0; j < adapter.getCount(); j++) {
+//            View v = adapter.getView(j, null, null);
+//            final int f = j;
+//            v.findViewById(R.id.removebutton).setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    adapter.remove(adapter.getItem(f));
+//                }
+//            });
+//        }
+
+
+
         TextView submit = findViewById(R.id.submit);
         submit.setOnClickListener(new View.OnClickListener() {
             @Override

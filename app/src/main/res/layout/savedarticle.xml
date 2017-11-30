@@ -9,7 +9,6 @@
         android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
@@ -21,7 +20,7 @@
 
 
 
-    <CheckedTextView  xmlns:android="http://schemas.android.com/apk/res/android"
+    <TextView  xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center_vertical"
@@ -31,12 +30,7 @@
 
     />
 
-    <Button
-        android:id="@+id/removebutton"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Remove"
-    />
+
 
 </LinearLayout>
 

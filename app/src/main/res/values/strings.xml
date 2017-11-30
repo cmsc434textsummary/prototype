@@ -19,13 +19,13 @@
 
     <string-array name="type_names">
         <item>Select Type</item>
-        <item>Type1</item>
-        <item>Type2</item>
-        <item>Type3</item>
-        <item>Type4</item>
-        <item>Type5</item>
-        <item>Type6</item>
-        <item>Type7</item>
+        <item>Textbook</item>
+        <item>Cooking</item>
+        <item>Science</item>
+        <item>Animal</item>
+        <item>News</item>
+        <item>Leisure</item>
+        <item>Technology</item>
     </string-array>
 
 
