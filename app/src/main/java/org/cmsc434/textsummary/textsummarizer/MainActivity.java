@@ -37,7 +37,10 @@ public class MainActivity extends BaseMenuActivity {
     }
 
     public void myArticles(View view) {
-        Intent intent = new Intent(this, SavedArticlesActivity.class);
+        Intent intent = new Intent(this, SummaryActivity.class);
+        intent.putExtra("url",urlEditText.getText());
+        intent.putExtra("linenum",5);
+        intent.putExtra("keysearch",false);
         startActivity(intent);
     }
 

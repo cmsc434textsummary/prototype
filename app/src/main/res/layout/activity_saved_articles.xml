@@ -88,34 +88,38 @@
             <LinearLayout
                 android:id="@+id/endLinearLayout"
                 android:layout_width="match_parent"
-                android:layout_height="25dp"
-                android:paddingLeft="@dimen/activity_horizontal_margin"
-                android:paddingRight="@dimen/activity_horizontal_margin"
-                android:background="#aaaaaa"
+                android:layout_height="36dp"
                 android:layout_alignParentBottom="true"
-                android:orientation="horizontal">
+                android:background="#aaaaaa"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin">
 
                 <TextView
                     android:id="@+id/back"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="5dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:clickable="true"
+                    android:paddingTop="5dp"
                     android:text="Back"
-                    android:textAlignment="textStart"
-                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/submit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="5dp"
                     android:layout_weight="1"
                     android:clickable="true"
+                    android:paddingTop="5dp"
                     android:text="Submit"
-                    android:textAlignment="textEnd"
-                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                    android:textAlignment="viewEnd"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
         </RelativeLayout>

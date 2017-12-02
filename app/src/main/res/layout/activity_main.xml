@@ -40,16 +40,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Recommended for Me"
-            android:onClick="recommended" />
+            android:layout_marginTop="20dp"
+            android:onClick="recommended"
+            android:text="Recommended for Me" />
 
         <Button
             android:id="@+id/myarticles"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="My Articles"
-            android:onClick="myArticles" />
+            android:onClick="myArticles"
+            android:text="My Saved Articles" />
 
     </LinearLayout>
 

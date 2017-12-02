@@ -92,8 +92,13 @@ public class SummaryActivity extends BaseMenuActivity {
     public void backOnClick(View view) {
         /* TODO save url, article text package result intent */
 
-        setResult(RESULT_OK);
-        finish();
+        //setResult(RESULT_OK);
+        //finish();
+
+        //repackaged this as an intent now that workflow places summary page before config page
+        Intent i = new Intent(this, SummaryConfigActivity.class);
+        i.putExtra("articleUrl", url);
+        startActivity(i);
     }
 
     public void fullOnClick(View view) {
