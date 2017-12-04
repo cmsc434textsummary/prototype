@@ -91,8 +91,8 @@
 
         <TextView
             android:id="@+id/backtextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_gravity="start"
             android:layout_weight="1"
             android:onClick="backOnClick"
@@ -106,10 +106,10 @@
 
         <TextView
             android:id="@+id/savetextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:layout_weight="1"
+            android:layout_weight="0.8"
             android:clickable="true"
             android:onClick="saveOnClick"
             android:paddingTop="5dp"
@@ -121,8 +121,8 @@
 
         <TextView
             android:id="@+id/fulltextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_gravity="end"
             android:onClick="fullOnClick"
             android:text="Read full"

@@ -23,7 +23,18 @@ public class MainActivity extends BaseMenuActivity {
         setSupportActionBar(myToolbar);
         urlEditText = findViewById(R.id.textView);
 
+        Intent intent = getIntent();
+        if(intent != null) {
+            String sharedText = getIntent().getStringExtra(Intent.EXTRA_TEXT);
+            if(sharedText != null) {
+                urlEditText.setText(sharedText);
+                urlEditText.setSelection(0);
+            }
+
+        }
+
     }
+
 
     public void createSummary(View view){
         //get text from textbox
@@ -57,7 +68,18 @@ public class MainActivity extends BaseMenuActivity {
     @Override
     protected void onResume() {
         super.onResume();
+
         this.invalidateOptionsMenu();
+
+        Intent intent = getIntent();
+        if(intent != null) {
+            String sharedText = getIntent().getStringExtra(Intent.EXTRA_TEXT);
+            if(sharedText != null) {
+                urlEditText.setText(sharedText);
+                urlEditText.setSelection(0);
+            }
+
+        }
 
     }
 }

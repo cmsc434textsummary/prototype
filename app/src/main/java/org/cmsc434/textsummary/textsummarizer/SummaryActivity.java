@@ -29,6 +29,9 @@ public class SummaryActivity extends BaseMenuActivity {
             displayTitleView,
             displayAuthorView,
             displaySiteNameView;
+    public static TextView
+            saveTextView;
+    public static boolean isSaved = false;
 
     public String url;
 
@@ -49,16 +52,16 @@ public class SummaryActivity extends BaseMenuActivity {
         displayTextView = (TextView) findViewById(R.id.displayTextView);
         siteLogoImgView = (ImageView) findViewById(R.id.displaySiteImageView);
         articleImgView = (ImageView) findViewById(R.id.displayArticleImageView);
-
+        saveTextView = (TextView) findViewById(R.id.savetextView);
 
         Bundle data = getIntent().getExtras();
 
-        if(data != null) {
-            url = ((SpannableString) data.get("url")).toString();
-        } else {
-            url = getText(R.string.sample_url).toString();
-        }
-
+//        if(data != null) {
+//            url = ((SpannableString) data.get("url")).toString();
+//        } else {
+//
+//        }
+        url = getText(R.string.sample_url).toString();
 
         /* TODO needed for actual implementation */
 //        if(!URLUtil.isValidUrl(url)) {
@@ -86,7 +89,15 @@ public class SummaryActivity extends BaseMenuActivity {
 
 
     public void saveOnClick(View view) {
-        Toast.makeText(getApplicationContext(), getText(R.string.not_implemented), Toast.LENGTH_LONG).show();
+        if(isSaved) {
+            Toast.makeText(getApplicationContext(), getText(R.string.is_unsaved), Toast.LENGTH_LONG).show();
+            saveTextView.setText("Save");
+            isSaved = false;
+        } else {
+            Toast.makeText(getApplicationContext(), getText(R.string.is_saved), Toast.LENGTH_LONG).show();
+            saveTextView.setText("Unsave");
+            isSaved = true;
+        }
     }
 
     public void backOnClick(View view) {

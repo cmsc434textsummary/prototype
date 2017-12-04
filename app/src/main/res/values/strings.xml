@@ -31,6 +31,8 @@
 
     <string name="empty"></string>
     <string name="invalid_url">Invalid URL, failed to open the page</string>
+    <string name="is_saved">Article is saved</string>
+    <string name="is_unsaved">Article is unsaved</string>
     <string name="not_implemented">This function is not implemented yet</string>
     <string name="sample_url">https://www.washingtonpost.com/politics/whos-who-in-the-george-papadopoulos-court-documents/2017/10/30/e131158c-bdb3-11e7-97d9-bdab5a0ab381_story.html?utm_term=.be7f3dfd193d</string>
     <string name="sample_favicon_path">drawable/wp_favicon.jpg</string>
