@@ -40,7 +40,7 @@ public class MainActivity extends BaseMenuActivity {
         //get text from textbox
         TextView input = findViewById(R.id.textView);
         String aURL = input.getText().toString();
-        Intent intent = new Intent(this, SummaryConfigActivity.class);
+        Intent intent = new Intent(this, SummaryActivity.class);
         //pass text to summary activity
         intent.putExtra("articleURL", aURL);
         // open summary activity
