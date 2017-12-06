@@ -7,6 +7,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -32,7 +33,7 @@ public class SavedArticlesActivity extends BaseMenuActivity {
         /* Drop down list Adapter */
         final ListView checkboxView = (ListView)findViewById(R.id.savedListView);
         checkboxView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
-        String[] items={"10 Step To Successful Study", "How to Build Muscle", "How To Make Money","How to Diet", "Earn Money From Internet", "Guide to Bake Cookies","10 Rules to Survive in CS"};
+        final String[] items={getString(R.string.sample1_title), getString(R.string.sample2_title), getString(R.string.sample3_title)};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.checkbox_savedarticle, R.id.savedTextView, items);
         checkboxView.setAdapter(adapter);
 //        checkboxView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
@@ -52,6 +53,20 @@ public class SavedArticlesActivity extends BaseMenuActivity {
 //
 //            }
 //        });
+
+
+
+        checkboxView.setAdapter(adapter);
+        checkboxView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                String select = items[i];
+                Intent intent = new Intent(SavedArticlesActivity.this, SummaryActivity.class);
+                intent.putExtra("saved",select);
+                startActivity(intent);
+            }
+        });
+
         TextView submit = findViewById(R.id.submit);
         submit.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -54,7 +54,7 @@ public class SummaryConfigActivity extends BaseMenuActivity {
         Intent received = getIntent();
         if (received != null){
             Bundle data = received.getExtras();
-            url = (String) data.get("articleURL");
+            url = (String) data.get("url");
         }
 
         if(url != null) {
@@ -74,6 +74,7 @@ public class SummaryConfigActivity extends BaseMenuActivity {
         i.putExtra("url",urlEditText.getText());
         i.putExtra("linenum",lineNumEditText.getText());
         i.putExtra("keysearch",saveCheckBox.isChecked());
+        i.putExtra("saved", getString(R.string.sample1_title));
         startActivity(i);
     }
 

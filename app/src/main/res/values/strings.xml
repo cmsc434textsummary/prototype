@@ -34,11 +34,12 @@
     <string name="is_saved">Article is saved</string>
     <string name="is_unsaved">Article is unsaved</string>
     <string name="not_implemented">This function is not implemented yet</string>
-    <string name="sample_url">https://www.washingtonpost.com/politics/whos-who-in-the-george-papadopoulos-court-documents/2017/10/30/e131158c-bdb3-11e7-97d9-bdab5a0ab381_story.html?utm_term=.be7f3dfd193d</string>
-    <string name="sample_favicon_path">drawable/wp_favicon.jpg</string>
-    <string name="sample_author">Rosalind S. Helderman</string>
-    <string name="sample_title">Who’s who in the George Papadopoulos court documents</string>
-    <string name="sample_text">
+
+    <string name="sample1_url">https://www.washingtonpost.com/politics/whos-who-in-the-george-papadopoulos-court-documents/2017/10/30/e131158c-bdb3-11e7-97d9-bdab5a0ab381_story.html?utm_term=.be7f3dfd193d</string>
+    <string name="sample1_favicon_path">drawable/wp_favicon</string>
+    <string name="sample1_author">Rosalind S. Helderman</string>
+    <string name="sample1_title">Who’s who in the George Papadopoulos court documents</string>
+    <string name="sample1_text">
         Newly released court documents show that Trump foreign policy adviser George Papadopoulos
         communicated with several senior campaign officials about his outreach to the Russian government
         over a period of months. The recipients of Papadopoulos’s emails are not named in the filings,
@@ -52,8 +53,64 @@
         him to the Russian ambassador and a Russian woman he described as “Putin\’s niece.”
         The group had talked about arranging a meeting “between us and the Russian leadership to
         discuss U.S.-Russia ties under President Trump,” Papadopoulos wrote. </string>
-    <string name="sample_source">WashingtonPost</string>
-    <string name="sample_image_path">drawable/wp_image.jpg</string>
+    <string name="sample1_source">WashingtonPost</string>
+    <string name="sample1_image_path">drawable/wp_image</string>
+
+
+    <string name="sample2_url">"http://www.bbc.co.uk/news/world-middle-east-42250399</string>
+    <string name="sample2_favicon_path">drawable/bbc_favicon</string>
+    <string name="sample2_author">BBC News</string>
+    <string name="sample2_title">US Jerusalem recognition \'kiss of death\'</string>
+    <string name="sample2_text">
+        An expected announcement by President Donald Trump that the US will become the first country to recognise Jerusalem as
+        Israel\'s capital has been dubbed a "kiss of death" for the Middle East peace process by the Palestinians. But an Israeli
+        minister urged other countries to follow the US lead. Mr Trump is expected to confirm the decision in a speech later.
+        Pope Francis called for the status quo in Jerusalem to be respected, in line with United Nations resolutions.
+        Mr Trump will also start the process of moving the US embassy from Tel Aviv to Jerusalem.
+        The decision - which would fulfil a campaign promise and appeal to Mr Trump\'s right-wing base - risks
+        a heated reaction from US allies in the Muslim world and brings a risk of protests and unrest. It also
+        makes it difficult for the US to be seen as a neutral mediator in the Middle East peace process.
+        East Jerusalem was annexed from Jordan after the 1967 war in the Middle East, and is not recognised
+        by other countries as part of Israel. Israel has always regarded Jerusalem as its capital,
+        while the Palestinians want East Jerusalem to be the capital of a future Palestinian state.
+        In recognising Jerusalem as Israel\'s capital, the US would be reversing its own longstanding policy
+        that the status of the holy city would need to be resolved as part of Middle East peace talks.
+        The Palestinians' representative to the UK, Manuel Hassassian, told the BBC that the changes
+        to US policy on Jerusalem amounted to a "kiss of death" for the two-state solution in peace
+        efforts and were like a "declaration of war". Israeli Education Minister Naftali Bennett described
+        it as a "big step towards regional peace" and said other countries should move their embassies too.
+        Theresa May said she would speak to Mr Trump about the US move. The UK's position on Jerusalem had not
+        changed, the Prime Minister told Parliament. The city's status should be the subject of negotiation and
+        it should be the shared capital of Israel and a Palestinian state, she added. Turkey's President Recep
+        Tayyip Erdogan said the step would "play into the hands of terror groups". The BBC's Barbara Plett-Usher,
+        in Washington, says the president is expected to try and calm international alarm by stating that the US
+        is prepared to support a two-state solution, if both Israelis and Palestinians agree to it.
+    </string>
+    <string name="sample2_source">BBC News</string>
+    <string name="sample2_image_path">drawable/bbc_image</string>
+
+
+    <string name="sample3_url">"http://www.bbc.co.uk/news/world-europe-42256140</string>
+    <string name="sample3_favicon_path">drawable/bbc_favicon</string>
+    <string name="sample3_author">BBC News</string>
+    <string name="sample3_title">Putin to run again for Russia president</string>
+    <string name="sample3_text">
+        Russia\'s Vladimir Putin has said he will seek another term as president in next year\'s election.
+        He made the announcement in a speech to workers at a car factory in the Volga city of Nizhny Novgorod.
+        "I will put forward my candidacy for the post of president of the Russian federation," he said.
+        Mr Putin has been in power since 2000, either as president or prime minister. If he wins the March
+        election he will be eligible to serve until 2024. Russian TV journalist Ksenia Sobchak has already
+        said she will stand in the election but opinion polls suggest Mr Putin will win easily. Russia\'s main
+        opposition leader, Alexei Navalny, has been formally barred from standing because he was found guilty
+        of embezzlement - a charge he claims was politically motivated. Mr Putin is popular with many Russians,
+        who see him as a strong leader who has restored Russia's global standing with a decisive military intervention
+        in the Syrian civil war and Russia's annexation of Crimea from Ukraine. But his critics accuse him of
+        facilitating corruption and illegally annexing Crimea, which has led to international condemnation.
+    </string>
+    <string name="sample3_source">BBC News</string>
+    <string name="sample3_image_path">drawable/bbc_image1</string>
+
+
     <string name="password_sent">Password reset information sent to email</string>
     <string name="signed_out">Successfully signed out</string>
     <string name="sign_in">Signed in as</string>

@@ -33,7 +33,9 @@ public class SummaryActivity extends BaseMenuActivity {
             saveTextView;
     public static boolean isSaved = false;
 
-    public String url;
+    public String
+            url,
+            saved;
 
 
 
@@ -55,13 +57,71 @@ public class SummaryActivity extends BaseMenuActivity {
         saveTextView = (TextView) findViewById(R.id.savetextView);
 
         Bundle data = getIntent().getExtras();
+        int urlId, favId, imageId, authorId, sourceId, textId;
 
-//        if(data != null) {
-//            url = ((SpannableString) data.get("url")).toString();
-//        } else {
-//
-//        }
-        url = getText(R.string.sample_url).toString();
+
+        if(data != null) {
+            saved = data.getString("saved");
+        }
+
+        if(saved != null && !saved.isEmpty()) {
+            if(saved.equals(getString(R.string.sample1_title))) {
+                urlId = R.string.sample1_url;
+                favId = R.string.sample1_favicon_path;
+                imageId = R.string.sample1_image_path;
+                authorId = R.string.sample1_author;
+                sourceId = R.string.sample1_source;
+                textId = R.string.sample1_text;
+            } else if (saved.equals(getString(R.string.sample2_title))) {
+                urlId = R.string.sample2_url;
+                favId = R.string.sample2_favicon_path;
+                imageId = R.string.sample2_image_path;
+                authorId = R.string.sample2_author;
+                sourceId = R.string.sample2_source;
+                textId = R.string.sample2_text;
+            } else {
+                urlId = R.string.sample3_url;
+                favId = R.string.sample3_favicon_path;
+                imageId = R.string.sample3_image_path;
+                authorId = R.string.sample3_author;
+                sourceId = R.string.sample3_source;
+                textId = R.string.sample3_text;
+            }
+
+            url = getText(urlId).toString();
+
+        /*  Sample display of summary */
+            int imageResource = getResources().getIdentifier(getText(favId).toString(), null, getPackageName());
+            Bitmap favicon = BitmapFactory.decodeResource(getResources(), imageResource);
+            siteLogoImgView.setImageBitmap(favicon);
+            imageResource = getResources().getIdentifier(getText(imageId).toString(), null, getPackageName());
+            Bitmap image = BitmapFactory.decodeResource(getResources(), imageResource);
+            articleImgView.setImageBitmap(image);
+
+            displayAuthorView.setText(authorId);
+            displayTitleView.setText(saved);
+            displaySiteNameView.setText(sourceId);
+            displayTextView.setText(textId);
+
+        } else {
+            url = getText(R.string.sample1_url).toString();
+
+            int imageResource = getResources().getIdentifier(getText(R.string.sample1_favicon_path).toString(), null, getPackageName());
+            Bitmap favicon = BitmapFactory.decodeResource(getResources(), imageResource);
+
+            siteLogoImgView.setImageBitmap(favicon);
+            imageResource = getResources().getIdentifier(getText(R.string.sample1_image_path).toString(), null, getPackageName());
+            Bitmap image = BitmapFactory.decodeResource(getResources(),imageResource);
+
+            articleImgView.setImageBitmap(image);
+
+            displayAuthorView.setText(R.string.sample1_author);
+            displayTitleView.setText(R.string.sample1_title);
+            displaySiteNameView.setText(R.string.sample1_source);
+            displayTextView.setText(R.string.sample1_text);
+        }
+
+
 
         /* TODO needed for actual implementation */
 //        if(!URLUtil.isValidUrl(url)) {
@@ -70,19 +130,6 @@ public class SummaryActivity extends BaseMenuActivity {
 //            finish();
 //        }
 
-
-        /*  Sample display of summary */
-        int imageResource = getResources().getIdentifier(getText(R.string.sample_favicon_path).toString(), null, getPackageName());
-        Bitmap favicon = BitmapFactory.decodeResource(getResources(), R.drawable.wp_favicon);
-        siteLogoImgView.setImageBitmap(favicon);
-        imageResource = getResources().getIdentifier(getText(R.string.sample_image_path).toString(), null, getPackageName());
-        Bitmap image = BitmapFactory.decodeResource(getResources(), R.drawable.wp_image);
-        articleImgView.setImageBitmap(image);
-
-        displayAuthorView.setText(R.string.sample_author);
-        displayTitleView.setText(R.string.sample_title);
-        displaySiteNameView.setText(R.string.sample_source);
-        displayTextView.setText(R.string.sample_text);
 
 
     }
@@ -108,8 +155,16 @@ public class SummaryActivity extends BaseMenuActivity {
 
         //repackaged this as an intent now that workflow places summary page before config page
         Intent i = new Intent(this, SummaryConfigActivity.class);
-        i.putExtra("articleUrl", url);
+        i.putExtra("url", url);
         startActivity(i);
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent i = new Intent(this, SummaryConfigActivity.class);
+        i.putExtra("url", url);
+        super.onBackPressed();
+
     }
 
     public void fullOnClick(View view) {

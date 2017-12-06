@@ -5,11 +5,12 @@
         android:title="Account"
         android:onClick="accountOnClick"
         android:icon="@drawable/usericon"
-        balloonberry:showAsAction="ifRoom"/>
+        balloonberry:showAsAction="always"/>
     <item android:id="@+id/logo"
         android:title="Home"
         android:onClick="homeOnClick"
-        android:icon="@drawable/usericon"/>
+        android:icon="@drawable/home_icon"
+        balloonberry:showAsAction="always"/>
 
 
 
