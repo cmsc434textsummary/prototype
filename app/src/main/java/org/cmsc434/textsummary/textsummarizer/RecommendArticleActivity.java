@@ -24,11 +24,14 @@ public class RecommendArticleActivity extends BaseMenuActivity {
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
 
+        setTitle("Recommended Articles");
+
+
         /*   code here   */
         /* Drop down list Adapter */
         final ListView checkboxView = (ListView)findViewById(R.id.listView1);
-        checkboxView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
-String[] items={"10 Step To Successful Outsourcing", "6 Instant Confidence Boosters", "Tips To Make Money Online","No Cellphones By Law", "Money With Facebook Ads", "Guide to Making Money Online","24 Rules Creating Successful Websites"};
+        checkboxView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+String[] items={"Who's who in the George Papadopoulos","How to Make Pasta","10 Step To Successful Outsourcing", "6 Instant Confidence Boosters", "Tips To Make Money Online","No Cellphones By Law", "Money With Facebook Ads", "Guide to Making Money Online","24 Rules Creating Successful Websites"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.checkbox, R.id.textview, items);
         checkboxView.setAdapter(adapter);
 //        checkboxView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
@@ -37,17 +40,17 @@ String[] items={"10 Step To Successful Outsourcing", "6 Instant Confidence Boost
 
         /* Button Activities */
 
-        Button selectAll = findViewById(R.id.selectAll);
-        selectAll.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                for ( int i=0; i < checkboxView.getChildCount(); i++) {
-                    checkboxView.setItemChecked(i, true);
-                }
-
-            }
-        });
+//        Button selectAll = findViewById(R.id.selectAll);
+//        selectAll.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//                for ( int i=0; i < checkboxView.getChildCount(); i++) {
+//                    checkboxView.setItemChecked(i, true);
+//                }
+//
+//            }
+//        });
         TextView submit = findViewById(R.id.submit);
         submit.setOnClickListener(new View.OnClickListener() {
             @Override

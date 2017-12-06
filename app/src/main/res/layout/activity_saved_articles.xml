@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="org.cmsc434.textsummary.textsummarizer.RecommendArticleActivity">
+    tools:context="org.cmsc434.textsummary.textsummarizer.SavedArticlesActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/my_toolbar"
@@ -71,19 +71,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-            <Button
-                android:background="#ffffff"
-                android:id="@+id/selectAll"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
 
-                android:text="Click to Select All" />
 
             <ListView
-                android:id="@+id/listView1"
+                android:id="@+id/savedListView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/selectAll" />
+             />
 
             <LinearLayout
                 android:id="@+id/endLinearLayout"

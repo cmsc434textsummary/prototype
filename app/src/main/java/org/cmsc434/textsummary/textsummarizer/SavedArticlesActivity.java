@@ -22,16 +22,18 @@ public class SavedArticlesActivity extends BaseMenuActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recommend_article);
+        setContentView(R.layout.activity_saved_articles);
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
 
+        setTitle("Saved Articles");
+
         /*   code here   */
         /* Drop down list Adapter */
-        final ListView checkboxView = (ListView)findViewById(R.id.listView1);
-        checkboxView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
-        ArrayList<String> items= new ArrayList<>(Arrays.asList("10 Step To Successful Study", "How to Build Muscle", "How To Make Money","How to Diet", "Earn Money From Internet", "Guide to Bake Cookies","10 Rules to Survive in CS"));
-        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.savedarticle, R.id.textview, items);
+        final ListView checkboxView = (ListView)findViewById(R.id.savedListView);
+        checkboxView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+        String[] items={"10 Step To Successful Study", "How to Build Muscle", "How To Make Money","How to Diet", "Earn Money From Internet", "Guide to Bake Cookies","10 Rules to Survive in CS"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.checkbox_savedarticle, R.id.savedTextView, items);
         checkboxView.setAdapter(adapter);
 //        checkboxView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
 
@@ -39,44 +41,22 @@ public class SavedArticlesActivity extends BaseMenuActivity {
 
         /* Button Activities */
 
-        Button selectAll = findViewById(R.id.selectAll);
-        selectAll.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                for ( int i=0; i < checkboxView.getChildCount(); i++) {
-                    checkboxView.setItemChecked(i, true);
-                }
-
-            }
-        });
-
-//<Button
-//        android:id="@+id/removebutton"
-//        android:layout_width="match_parent"
-//        android:layout_height="match_parent"
-//        android:text="Remove"
-//                />
+//        Button selectAll = findViewById(R.id.selectAll);
+//        selectAll.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
 //
-//
-//
-//        for (int j=0; j < adapter.getCount(); j++) {
-//            View v = adapter.getView(j, null, null);
-//            final int f = j;
-//            v.findViewById(R.id.removebutton).setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-//                    adapter.remove(adapter.getItem(f));
+//                for ( int i=0; i < checkboxView.getChildCount(); i++) {
+//                    checkboxView.setItemChecked(i, true);
 //                }
-//            });
-//        }
-
-
-
+//
+//            }
+//        });
         TextView submit = findViewById(R.id.submit);
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+//                Intent submitIntent = new Intent(this, SummaryActivity.class);
                 startActivity(new Intent(SavedArticlesActivity.this, SummaryActivity.class));
             }
         });
@@ -85,8 +65,13 @@ public class SavedArticlesActivity extends BaseMenuActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(SavedArticlesActivity.this, MainActivity.class));
+//                Intent backIntent = new Intent(this, MainActivity.class);
+
+
+//  This is wrong.. Back shouldn't put current activity on the stack. It resulted creating many instances of this page.
+//                startActivity(new Intent(RecommendArticleActivity.this, MainActivity.class));
                 finish();
+
             }
         });
 

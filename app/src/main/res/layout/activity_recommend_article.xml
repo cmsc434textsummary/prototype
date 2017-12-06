@@ -76,19 +76,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-            <Button
-                android:background="#ffffff"
-                android:id="@+id/selectAll"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
 
-                android:text="Click to Select All" />
 
             <ListView
                 android:id="@+id/listView1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/selectAll" />
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true" />
 
             <LinearLayout
                 android:id="@+id/endLinearLayout"
