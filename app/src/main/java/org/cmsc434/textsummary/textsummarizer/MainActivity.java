@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 public class MainActivity extends BaseMenuActivity {
 
-    private static EditText urlEditText;
+    private EditText urlEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,11 +57,6 @@ public class MainActivity extends BaseMenuActivity {
 
     public void recommended(View view) {
         Intent intent = new Intent(this, RecommendArticleActivity.class);
-        startActivity(intent);
-    }
-
-    public void sampleOnClick(View view) {
-        Intent intent = new Intent(this, SummaryActivity.class);
         startActivity(intent);
     }
 
