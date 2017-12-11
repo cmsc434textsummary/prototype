@@ -42,27 +42,31 @@
                 android:id="@+id/dropdown"
 
                 style="@android:style/Widget.Holo.Light.Spinner"
-                android:layout_width="120dp"
+                android:layout_weight="2"
+                android:layout_marginBottom="9dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@+id/action_setting"
                 android:entries="@array/type_names">
 
-
             </android.support.v7.widget.AppCompatSpinner>
 
             <EditText
-
-                android:layout_width="220dp"
+                android:layout_weight="5"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="   Type to Search Articles" />
+                android:maxLines="1"
+
+                android:paddingLeft="20dp"
+                android:hint="Search Articles" />
 
             <ImageView
-                android:src="@drawable/search"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:paddingRight="5dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="9dp"
                 android:layout_weight="1"
-                />
+                android:paddingRight="5dp"
+                android:src="@drawable/search" />
 
 
         </LinearLayout>
@@ -79,30 +83,6 @@
                 android:layout_height="wrap_content"
              />
 
-            <LinearLayout
-                android:id="@+id/endLinearLayout"
-                android:layout_width="match_parent"
-                android:layout_height="36dp"
-                android:layout_alignParentBottom="true"
-                android:background="#aaaaaa"
-                android:orientation="horizontal"
-                android:paddingLeft="@dimen/activity_horizontal_margin"
-                android:paddingRight="@dimen/activity_horizontal_margin">
-
-                <TextView
-                    android:id="@+id/submit"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:clickable="true"
-                    android:paddingTop="5dp"
-                    android:text="Submit"
-                    android:textAlignment="viewEnd"
-                    android:textAppearance="@style/TextAppearance.AppCompat"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
         </RelativeLayout>
 
 

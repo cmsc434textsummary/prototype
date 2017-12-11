@@ -71,6 +71,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:clickable="true"
                 android:linksClickable="true"
                 android:id="@+id/displayTextView"
                 android:lineSpacingExtra="5dp"

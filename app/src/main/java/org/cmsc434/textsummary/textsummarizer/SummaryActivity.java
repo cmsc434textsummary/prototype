@@ -7,7 +7,11 @@ import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.text.Html;
 import android.text.SpannableString;
+import android.text.TextPaint;
+import android.text.method.LinkMovementMethod;
+import android.text.style.ClickableSpan;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -37,7 +41,8 @@ public class SummaryActivity extends BaseMenuActivity {
             url,
             saved;
 
-
+    public int
+            lineNum;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,38 +93,36 @@ public class SummaryActivity extends BaseMenuActivity {
                 textId = R.string.sample3_text;
             }
 
-            url = getText(urlId).toString();
 
-        /*  Sample display of summary */
-            int imageResource = getResources().getIdentifier(getText(favId).toString(), null, getPackageName());
-            Bitmap favicon = BitmapFactory.decodeResource(getResources(), imageResource);
-            siteLogoImgView.setImageBitmap(favicon);
-            imageResource = getResources().getIdentifier(getText(imageId).toString(), null, getPackageName());
-            Bitmap image = BitmapFactory.decodeResource(getResources(), imageResource);
-            articleImgView.setImageBitmap(image);
-
-            displayAuthorView.setText(authorId);
-            displayTitleView.setText(saved);
-            displaySiteNameView.setText(sourceId);
-            displayTextView.setText(textId);
 
         } else {
-            url = getText(R.string.sample1_url).toString();
-
-            int imageResource = getResources().getIdentifier(getText(R.string.sample1_favicon_path).toString(), null, getPackageName());
-            Bitmap favicon = BitmapFactory.decodeResource(getResources(), imageResource);
-
-            siteLogoImgView.setImageBitmap(favicon);
-            imageResource = getResources().getIdentifier(getText(R.string.sample1_image_path).toString(), null, getPackageName());
-            Bitmap image = BitmapFactory.decodeResource(getResources(),imageResource);
-
-            articleImgView.setImageBitmap(image);
-
-            displayAuthorView.setText(R.string.sample1_author);
-            displayTitleView.setText(R.string.sample1_title);
-            displaySiteNameView.setText(R.string.sample1_source);
-            displayTextView.setText(R.string.sample1_text);
+            saved = getString(R.string.sample1_title);
+            urlId = R.string.sample1_url;
+            favId = R.string.sample1_favicon_path;
+            imageId = R.string.sample1_image_path;
+            authorId = R.string.sample1_author;
+            sourceId = R.string.sample1_source;
+            textId = R.string.sample1_text;
         }
+
+        url = getText(urlId).toString();
+         /*  Sample display of summary */
+        int imageResource = getResources().getIdentifier(getText(favId).toString(), null, getPackageName());
+        Bitmap favicon = BitmapFactory.decodeResource(getResources(), imageResource);
+        siteLogoImgView.setImageBitmap(favicon);
+        imageResource = getResources().getIdentifier(getText(imageId).toString(), null, getPackageName());
+        Bitmap image = BitmapFactory.decodeResource(getResources(), imageResource);
+        articleImgView.setImageBitmap(image);
+
+        displayAuthorView.setText(authorId);
+        displayTitleView.setText(saved);
+        displaySiteNameView.setText(sourceId);
+
+        String text = getString(textId);
+
+
+        displayTextView.setText(Html.fromHtml(text));
+        displayTextView.setMovementMethod(LinkMovementMethod.getInstance());
 
 
 

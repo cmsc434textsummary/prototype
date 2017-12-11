@@ -30,7 +30,7 @@
 
 
     <string name="empty"></string>
-    <string name="invalid_url">Invalid URL, failed to open the page</string>
+    <string name="invalid_url">Can\'t open the URL.\nPlease try with a valid URL</string>
     <string name="is_saved">Article is saved</string>
     <string name="is_unsaved">Article is unsaved</string>
     <string name="not_implemented">This function is not implemented yet</string>
@@ -40,19 +40,24 @@
     <string name="sample1_author">Rosalind S. Helderman</string>
     <string name="sample1_title">Who’s who in the George Papadopoulos court documents</string>
     <string name="sample1_text">
-        Newly released court documents show that Trump foreign policy adviser George Papadopoulos
-        communicated with several senior campaign officials about his outreach to the Russian government
-        over a period of months. The recipients of Papadopoulos’s emails are not named in the filings,
+        <![CDATA[Newly released court documents show that Trump foreign policy adviser
+        <a href="https://www.google.com/search?q=George+Papadopoulos&rlz=1C1CHBF_enUS748US748&oq=George+Papadopoulos&aqs=chrome..69i57.1828j0j9&sourceid=chrome&ie=UTF-8">George Papadopoulos</a>
+        communicated with several senior campaign officials about his outreach to the Russian government over a period of months. The recipients of
+        Papadopoulos\'s emails are not named in the filings,
         but The Washington Post has identified several individuals based on interviews and other documents.
         Papadopoulos pleaded guilty this month to lying to federal agents about his outreach to Russia.
-        “The Campaign Supervisor”: Trump campaign national co-chairman Sam Clovis
+        “The Campaign Supervisor”: Trump campaign national co-chairman
+        <a href="https://www.google.com/search?q=Sam+Clovis&rlz=1C1CHBF_enUS748US748&oq=Sam+Clovis&aqs=chrome..69i57.808j0j4&sourceid=chrome&ie=UTF-8">Sam Clovis</a>
         Victoria Toensing, an attorney for Sam Clovis, confirmed that several references in court filings
-        to “the campaign supervisor” refer to the onetime radio host from Iowa, who served as Trump\'s
+        to “the campaign supervisor” refer to the onetime radio host from Iowa, who served as
+        <a href="https://www.google.com/search?rlz=1C1CHBF_enUS748US748&ei=c98uWouKGNGvggerprPwDw&q=Trump">Trump</a>\'s
         national campaign co-chairman. At one point, Papadopoulos emailed Clovis and other campaign
         officials about a March 24, 2016, meeting he had in London with a professor, who had introduced
-        him to the Russian ambassador and a Russian woman he described as “Putin\’s niece.”
+        him to the Russian ambassador and a Russian woman he described as “
+        <a href="https://www.google.com/search?rlz=1C1CHBF_enUS748US748&ei=298uWt2YJoj4_Aah7KuABA&q=Putin">Putin</a>\’s niece.”
         The group had talked about arranging a meeting “between us and the Russian leadership to
-        discuss U.S.-Russia ties under President Trump,” Papadopoulos wrote. </string>
+            discuss U.S.-Russia ties under President Trump,” Papadopoulos wrote.]]>
+             </string>
     <string name="sample1_source">WashingtonPost</string>
     <string name="sample1_image_path">drawable/wp_image</string>
 
@@ -62,8 +67,12 @@
     <string name="sample2_author">BBC News</string>
     <string name="sample2_title">US Jerusalem recognition \'kiss of death\'</string>
     <string name="sample2_text">
-        An expected announcement by President Donald Trump that the US will become the first country to recognise Jerusalem as
-        Israel\'s capital has been dubbed a "kiss of death" for the Middle East peace process by the Palestinians. But an Israeli
+        <![CDATA[An expected announcement by President
+        <a href="https://www.google.com/search?rlz=1C1CHBF_enUS748US748&ei=8t8uWvKeG8q0_AbmjI_oDg&q=Donald+Trump">Donald Trump</a>
+        that the US will become the first country to recognise
+        <a href="https://www.google.com/search?rlz=1C1CHBF_enUS748US748&ei=cOAuWoLPGMvk_QbbrKHgDQ&q=Jerusalem">Jerusalem</a> as
+        Israel\'s capital has been dubbed a "kiss of death" for the Middle East peace process by the
+        <a href="https://www.google.com/search?rlz=1C1CHBF_enUS748US748&ei=1-AuWsrqJ8_w_AaG87voBw&q=Palestinians">Palestinians</a>. But an Israeli
         minister urged other countries to follow the US lead. Mr Trump is expected to confirm the decision in a speech later.
         Pope Francis called for the status quo in Jerusalem to be respected, in line with United Nations resolutions.
         Mr Trump will also start the process of moving the US embassy from Tel Aviv to Jerusalem.
@@ -75,16 +84,18 @@
         while the Palestinians want East Jerusalem to be the capital of a future Palestinian state.
         In recognising Jerusalem as Israel\'s capital, the US would be reversing its own longstanding policy
         that the status of the holy city would need to be resolved as part of Middle East peace talks.
-        The Palestinians' representative to the UK, Manuel Hassassian, told the BBC that the changes
+        The Palestinians' representative to the UK,
+        <a href="https://www.google.com/search?rlz=1C1CHBF_enUS748US748&ei=C-EuWvzJDayH_Qao5KqIAQ&q=Manuel+Hassassian">Manuel Hassassian</a>, told the BBC that the changes
         to US policy on Jerusalem amounted to a "kiss of death" for the two-state solution in peace
-        efforts and were like a "declaration of war". Israeli Education Minister Naftali Bennett described
+        efforts and were like a "declaration of war". Israeli Education Minister
+        <a href="https://www.google.com/search?rlz=1C1CHBF_enUS748US748&ei=WuEuWtewKouU_QaomL74DA&q=Naftali+Bennett">Naftali Bennett</a> described
         it as a "big step towards regional peace" and said other countries should move their embassies too.
         Theresa May said she would speak to Mr Trump about the US move. The UK's position on Jerusalem had not
         changed, the Prime Minister told Parliament. The city's status should be the subject of negotiation and
         it should be the shared capital of Israel and a Palestinian state, she added. Turkey's President Recep
         Tayyip Erdogan said the step would "play into the hands of terror groups". The BBC's Barbara Plett-Usher,
         in Washington, says the president is expected to try and calm international alarm by stating that the US
-        is prepared to support a two-state solution, if both Israelis and Palestinians agree to it.
+        is prepared to support a two-state solution, if both Israelis and Palestinians agree to it.]]>
     </string>
     <string name="sample2_source">BBC News</string>
     <string name="sample2_image_path">drawable/bbc_image</string>
@@ -95,17 +106,22 @@
     <string name="sample3_author">BBC News</string>
     <string name="sample3_title">Putin to run again for Russia president</string>
     <string name="sample3_text">
-        Russia\'s Vladimir Putin has said he will seek another term as president in next year\'s election.
-        He made the announcement in a speech to workers at a car factory in the Volga city of Nizhny Novgorod.
+        <![CDATA[Russia\'s
+        <a href="https://www.google.com/search?rlz=1C1CHBF_enUS748US748&ei=298uWt2YJoj4_Aah7KuABA&q=Putin">Vladimir Putin</a> has
+        said he will seek another term as president in next year\'s election.
+        He made the announcement in a speech to workers at a car factory in the Volga city of
+        <a href="https://www.google.com/search?rlz=1C1CHBF_enUS748US748&ei=MOIuWsaVLcO7ggfNtIegDQ&q=Nizhny+Novgorod">Nizhny Novgorod</a>.
         "I will put forward my candidacy for the post of president of the Russian federation," he said.
         Mr Putin has been in power since 2000, either as president or prime minister. If he wins the March
         election he will be eligible to serve until 2024. Russian TV journalist Ksenia Sobchak has already
         said she will stand in the election but opinion polls suggest Mr Putin will win easily. Russia\'s main
-        opposition leader, Alexei Navalny, has been formally barred from standing because he was found guilty
+        opposition leader,
+        <a href="https://www.google.com/search?rlz=1C1CHBF_enUS748US748&ei=mOEuWvKlJa7G_Qbv2LeQAQ&q=Alexei+Navalny">Alexei Navalny</a>,
+        has been formally barred from standing because he was found guilty
         of embezzlement - a charge he claims was politically motivated. Mr Putin is popular with many Russians,
         who see him as a strong leader who has restored Russia's global standing with a decisive military intervention
         in the Syrian civil war and Russia's annexation of Crimea from Ukraine. But his critics accuse him of
-        facilitating corruption and illegally annexing Crimea, which has led to international condemnation.
+        facilitating corruption and illegally annexing Crimea, which has led to international condemnation.]]>
     </string>
     <string name="sample3_source">BBC News</string>
     <string name="sample3_image_path">drawable/bbc_image1</string>

@@ -7,6 +7,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.URLUtil;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -38,13 +39,21 @@ public class MainActivity extends BaseMenuActivity {
 
     public void createSummary(View view){
         //get text from textbox
+
+
         TextView input = findViewById(R.id.textView);
         String aURL = input.getText().toString();
-        Intent intent = new Intent(this, SummaryActivity.class);
-        //pass text to summary activity
-        intent.putExtra("articleURL", aURL);
-        // open summary activity
-        startActivity(intent);
+        if(URLUtil.isValidUrl(aURL)) {
+            Intent intent = new Intent(this, SummaryActivity.class);
+            //pass text to summary activity
+            intent.putExtra("articleURL", aURL);
+            // open summary activity
+            startActivity(intent);
+        } else {
+            Toast.makeText(getApplicationContext(), getText(R.string.invalid_url), Toast.LENGTH_LONG).show();
+        }
+
+
     }
 
     public void myArticles(View view) {

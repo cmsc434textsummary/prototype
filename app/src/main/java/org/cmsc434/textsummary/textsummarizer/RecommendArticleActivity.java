@@ -7,6 +7,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import java.util.ArrayList;
@@ -31,7 +32,7 @@ public class RecommendArticleActivity extends BaseMenuActivity {
         /* Drop down list Adapter */
         final ListView checkboxView = (ListView)findViewById(R.id.listView1);
         checkboxView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
-String[] items={"Who's who in the George Papadopoulos","How to Make Pasta","10 Step To Successful Outsourcing", "6 Instant Confidence Boosters", "Tips To Make Money Online","No Cellphones By Law", "Money With Facebook Ads", "Guide to Making Money Online","24 Rules Creating Successful Websites"};
+        String[] items={getString(R.string.sample1_title),"How to Make Pasta","10 Step To Successful Outsourcing", getString(R.string.sample2_title),  getString(R.string.sample3_title),"6 Instant Confidence Boosters", "Tips To Make Money Online","No Cellphones By Law", "Money With Facebook Ads", "Guide to Making Money Online","24 Rules Creating Successful Websites"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.checkbox, R.id.textview, items);
         checkboxView.setAdapter(adapter);
 //        checkboxView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
@@ -51,28 +52,17 @@ String[] items={"Who's who in the George Papadopoulos","How to Make Pasta","10 S
 //
 //            }
 //        });
-        TextView submit = findViewById(R.id.submit);
-        submit.setOnClickListener(new View.OnClickListener() {
+
+        checkboxView.setAdapter(adapter);
+        checkboxView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onClick(View view) {
-//                Intent submitIntent = new Intent(this, SummaryActivity.class);
-                startActivity(new Intent(RecommendArticleActivity.this, SummaryActivity.class));
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(RecommendArticleActivity.this, SummaryActivity.class);
+                startActivity(intent);
             }
         });
 
-        TextView back = findViewById(R.id.back);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-//                Intent backIntent = new Intent(this, MainActivity.class);
-
-
-//  This is wrong.. Back shouldn't put current activity on the stack. It resulted creating many instances of this page.
-//                startActivity(new Intent(RecommendArticleActivity.this, MainActivity.class));
-            finish();
-
-            }
-        });
+        checkboxView.requestFocus();
 
 
     }

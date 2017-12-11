@@ -53,9 +53,6 @@ public class SavedArticlesActivity extends BaseMenuActivity {
 //
 //            }
 //        });
-
-
-
         checkboxView.setAdapter(adapter);
         checkboxView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -67,28 +64,9 @@ public class SavedArticlesActivity extends BaseMenuActivity {
             }
         });
 
-        TextView submit = findViewById(R.id.submit);
-        submit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-//                Intent submitIntent = new Intent(this, SummaryActivity.class);
-                startActivity(new Intent(SavedArticlesActivity.this, SummaryActivity.class));
-            }
-        });
 
-        TextView back = findViewById(R.id.back);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-//                Intent backIntent = new Intent(this, MainActivity.class);
+        checkboxView.requestFocus();
 
-
-//  This is wrong.. Back shouldn't put current activity on the stack. It resulted creating many instances of this page.
-//                startActivity(new Intent(RecommendArticleActivity.this, MainActivity.class));
-                finish();
-
-            }
-        });
 
 
     }
